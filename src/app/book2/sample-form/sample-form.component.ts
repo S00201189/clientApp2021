@@ -15,15 +15,16 @@ export class SampleFormComponent implements OnInit {
 
   bookForm : FormGroup = new FormGroup({
     title: new FormControl ('', [Validators.required, Validators.minLength(3)]),
-    year_written: new FormControl ('', [Validators.required])
+    year_written: new FormControl ('', [Validators.required,])
   })
 
   onSubmit(){
-    console.log('forms submitted with ' + this.bookForm.value)
+    console.log('forms submitted with ')
+    console.table(this.bookForm.value)
   }
 
-  get title() {
-    return this.bookForm.get('title');
+  get title()  {
+    return this.bookForm.get('title') ;
   }
   get year_written() {
     return this.bookForm.get('year_written');
