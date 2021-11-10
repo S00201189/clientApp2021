@@ -14,4 +14,6 @@ export class BookRowComponent implements OnInit {
   }
 
   @Input() book!: Book;
+
+  
 }
